@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+    <environments default="development">
+        <environment id="ods">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://172.19.216.186:3306/longna_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useCursorFetch=true&amp;defaultFetchSize=1000&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="186.JSYC@longna"/>
+            </dataSource>
+        </environment>
+
+        <environment id="bus">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://172.19.216.178:3306/longna_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useCursorFetch=true&amp;defaultFetchSize=1000&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="108.CDYC@longna"/>
+            </dataSource>
+        </environment>
+
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.0.108:3306/longna_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useCursorFetch=true&amp;defaultFetchSize=1000&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="108.CDYC@longna"/>
+            </dataSource>
+        </environment>
+    </environments>
+</configuration>
